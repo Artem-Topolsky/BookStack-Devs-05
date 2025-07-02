@@ -1,22 +1,30 @@
 {
-  "name": "vanilla-app-template",
+  "name": "Command-Booksy-05",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/Command-Booksy-05/",
     "preview": "vite preview"
   },
   "devDependencies": {
     "glob": "^11.0.0",
     "postcss": "^8.4.41",
     "postcss-sort-media-queries": "^5.2.0",
+    "prettier": "^3.6.2",
     "vite": "^5.4.6"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.10.0",
+    "basiclightbox": "^5.0.4",
+    "modern-normalize": "^3.0.1",
+    "react-accessible-accordion": "^5.0.1",
+    "react-scroll": "^1.9.3",
+    "react-spinners": "^0.17.0",
+    "swiper": "^11.2.10",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }
