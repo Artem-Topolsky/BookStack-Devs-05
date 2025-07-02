@@ -1,11 +1,11 @@
 {
-  "name": "Command-Booksy-05",
+  "name": "BookStack-Devs-05",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Command-Booksy-05/",
+    "build": "vite build --base=/BookStack-Devs-05/",
     "preview": "vite preview"
   },
   "devDependencies": {
