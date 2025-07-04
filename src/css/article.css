@@ -80,9 +80,9 @@ margin: 24px 0;
     } }
 /* desk */
 
- @media screen and (min-width: 1280px) {
+ @media screen and (min-width: 1440px) {
     .container-article {
-            margin: 0;
+           
             padding: 64px;
             width: 1440px;
             height: auto;
