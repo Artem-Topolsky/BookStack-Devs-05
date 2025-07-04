@@ -1,0 +1,152 @@
+.container {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background: #fceee6;
+}
+
+.feedback-section {
+    padding: 64px 0;
+    text-align: left;
+}
+
+.feedback-title {
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.feedback-parag {
+    font-size: 18px;
+    margin-top: 24px;
+    line-height: 1.5;
+}
+
+
+.swiper-slide {
+    height: 314px !important;
+    padding: 32px;
+    background-color: white;
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: 16px;
+    margin-top: 80px;
+    margin-bottom: 32px;
+}
+
+
+.feedback-text {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-buttons button {
+    width: 48px;
+    height: 48px;
+    background: #e15d05;;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, fill 0.3s ease;
+}
+.swiper-button-next {
+    margin-left: 16px;
+}
+
+.nav-buttons .icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 20px !important;
+    left: 0;
+    width: auto !important;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: #fceee6;
+}
+
+.swiper-button-prev:hover svg,
+.swiper-button-next:hover svg {
+    fill: #000;
+}
+
+
+.swiper-button-prev.swiper-button-disabled:hover,
+.swiper-button-next.swiper-button-disabled:hover {
+    background: #e15d05;
+   
+}
+
+.swiper-button-prev.swiper-button-disabled:hover svg,
+.swiper-button-next.swiper-button-disabled:hover svg {
+    fill: white;
+
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.swiper-pagination {
+    display: flex;
+}
+.swiper-pagination-bullet-active {
+    background: black !important;
+}
+/* Tablet */
+@media (min-width: 768px) {
+.container {
+    max-width: 768px;
+    padding: 0 32px;
+}
+
+.swiper-slide {
+    width: 340px;
+    height: 244px !important;
+    padding: 32px;
+}
+.feedback-title {
+
+    padding-right: 0;
+}}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 65px;
+    }
+.swiper-slide {
+    width: 420px;
+    height: 218px !important;
+} 
+.feedback-title {
+    font-size: 48px;
+}
+}
