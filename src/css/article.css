@@ -1,0 +1,112 @@
+/*mobile*/
+.container-article{
+    display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 24px;
+        padding: 64px 16px;
+        width: 375px;
+        height: 739px;
+        color: black;
+        background-color:rgba(252, 238, 230, 1);
+        margin: 0 auto;
+}
+
+.chapter-article{
+font-weight: 600;
+font-size: 36px;
+line-height: 1.2;
+letter-spacing: -0.01em;
+text-align: left;
+
+}
+
+.paragraf-article{
+font-weight: 400;
+font-size: 18px;
+line-height: 1.5;
+text-align: left;
+margin: 24px 0;
+}
+
+.img-article{
+    border-radius: 16px;
+        width: 343px;
+        height: 248px;
+        margin: 32px 0;
+        transition: transform 0.3s ease;
+}
+.img-article:hover,
+.img-article:focus{
+    transform: scale(1.05);
+}
+
+/* tab */
+@media screen and (min-width: 768px) {
+    .article {
+        padding-bottom: 64px;
+    }
+    
+    .container-article {
+        width: 768px;
+        height: auto;
+        gap: 32px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chapter-article {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        color: var(--color-scheme-1-text);
+       
+    }
+
+    .paragraf-article {
+        width: 704px;
+        height: auto;
+        margin: 24px 0;
+       
+    }
+
+    .img-article {
+        width: 704px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    } }
+/* desk */
+
+ @media screen and (min-width: 1280px) {
+    .container-article {
+            margin: 0;
+            padding: 64px;
+            width: 1440px;
+            height: auto;
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+}
+
+.chapter-article {
+    font-size: 40px;
+    width: 640px;
+    height: 96px;
+}
+
+.paragraf-article {
+    width: 640px;
+        height: 81px;
+        margin: 24px 0;
+}
+
+.img-article {
+    width: 640px;
+    height: auto;
+    margin-left: auto; 
+}
+}
