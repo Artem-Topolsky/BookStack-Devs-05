@@ -12,6 +12,27 @@
     overflow: hidden
 }
 
+body {
+    padding-top: 70px;
+    /* подстрой под реальную высоту хедера */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.header--hidden {
+    transform: translateY(-100%);
+}
+
 .logo {
     display: flex;
     align-items: center;
