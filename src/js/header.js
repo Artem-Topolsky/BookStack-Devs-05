@@ -12,7 +12,6 @@ choiceSectionInHeader.addEventListener("click", handlerHeaderChoice);
 
 function clickOpenNavbar() {
     openNavbar.classList.remove("is-hidden");
-    console.log(window.innerHeight, window.innerWidth);
 };
 
 function handlerNavbarChoice(event) {
@@ -28,8 +27,8 @@ function closeNavbar() {
     openNavbar.classList.add("is-hidden");
 }
 
-console.log(window.innerHeight, window.innerWidth);
+// console.log(window.innerHeight, window.innerWidth);
 
-console.log(document.documentElement.scrollHeight);
+// console.log(document.documentElement.scrollHeight);
 
-console.log(document.documentElement.clientHeight);
+// console.log(document.documentElement.clientHeight);
