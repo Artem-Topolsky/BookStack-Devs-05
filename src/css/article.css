@@ -4,8 +4,6 @@
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-        gap: 24px;
-        padding: 64px 16px;
         width: 375px;
         height: 739px;
         color: black;
@@ -34,7 +32,7 @@ margin: 24px 0;
     border-radius: 16px;
         width: 343px;
         height: 248px;
-        margin: 32px 0;
+        margin: 32px 0 0;
         transition: transform 0.3s ease;
 }
 .img-article:hover,
@@ -51,7 +49,6 @@ margin: 24px 0;
     .container-article {
         width: 768px;
         height: auto;
-        gap: 32px;
         flex-direction: column;
         align-items: center;
     }
@@ -82,9 +79,6 @@ margin: 24px 0;
 
  @media screen and (min-width: 1440px) {
     .container-article {
-           
-            padding: 64px;
-            width: 1440px;
             height: auto;
             flex-direction: row;
             display: flex;

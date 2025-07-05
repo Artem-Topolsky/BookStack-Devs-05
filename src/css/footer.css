@@ -1,29 +1,10 @@
-/*
- * =========================================
- * Глобальні змінні та допоміжні класи
- * =========================================
- */
 :root {
-  --footer-bg: #ea8d50;
   --footer-text: #0b0500;
   --footer-text-hover: #ffffff;
   --footer-placeholder: rgba(11, 5, 0, 0.6);
   --transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* --main-font: 'Inter', sans-serif; */
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 html,
 body {
@@ -32,15 +13,13 @@ body {
   box-sizing: border-box;
 }
 
-/*
-   * =========================================
-   * ОНОВЛЕНІ СТИЛІ ДЛЯ СМАРТФОНІВ (Mobile First: 320px+)
-   * =========================================
-   */
+
+   /* * ОНОВЛЕНІ СТИЛІ ДЛЯ СМАРТФОНІВ (Mobile First: 320px+) */
+
 
 .footer {
-  background-color: var(--footer-bg);
   color: var(--footer-text);
+  background: #ea8d50;
 }
 
 .container {
@@ -52,6 +31,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 80px 0px;
+    background: #ea8d50;
   box-sizing: border-box;
 }
 
@@ -60,14 +40,14 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 32px; /* більше відступу між блоками */
+  gap: 32px;
 }
 
 .footer-left-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px; /* більше відступу між лого і навігацією */
+  gap: 32px;
 }
 
 .footer-logo-link {
@@ -84,7 +64,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 32px; /* більше відступу між пунктами меню */
+  gap: 32px;
 }
 
 .footer-nav-item a {
@@ -105,7 +85,8 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Join і форма по лівому краю */
+  align-items: flex-start;
+  padding: 0 10px;
 }
 
 .footer-form-title {
@@ -162,21 +143,6 @@ body {
   color: var(--footer-text-hover);
   background-color: var(--footer-text);
 }
-/* 
-.footer-signup-btn:disabled {
-  background-color: rgba(11, 5, 0, 1);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: not-allowed;
-  font-size: 16px;
-  font-weight: 400;
-  transition: none;
-  box-shadow: none;
-  opacity: 1;
-  text-align: center;
-  transform: none;
-} */
 
 .footer-required-note {
   font-size: 12px;
@@ -200,34 +166,15 @@ body {
 .footer-copyright {
   font-size: 14px;
   font-weight: 400;
-  /* opacity: 0.7; */
   text-align: center;
   margin: 0;
 }
 
-/*
-   * =========================================
-   * ГУМОВА ВЕРСТКА ДЛЯ МОБІЛЬНИХ (320px - 374px)
-   * =========================================
-   */
-@media (max-width: 374px) {
-  .footer-container {
-  }
-}
 
-/*
-   * =========================================
-   * ПЛАНШЕТ З 768px
-   * =========================================
-   */
+/* ПЛАНШЕТ З 768px */
+
 @media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 64px;
-  }
-  .footer-container {
-    max-width: 768px;
-  }
+
   .footer-top-wrapper {
     flex-direction: column;
     align-items: center;
@@ -251,6 +198,7 @@ body {
     margin: 0 auto;
     align-items: flex-start;
     text-align: left;
+    padding: 0; 
   }
   .footer-form-title {
     font-size: 16px;
@@ -284,21 +232,9 @@ body {
   }
 }
 
-/*
-   * =========================================
-   * ДЕСКТОП З 1440px
-   * =========================================
-   */
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    padding: 0 64px;
-  }
+/* ДЕСКТОП З 1440px */
 
-  .footer-container {
-    max-width: 1440px;
-    padding: 80px 0;
-  }
+@media (min-width: 1440px) {
 
   .footer-top-wrapper {
     flex-direction: row;
