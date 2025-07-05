@@ -17,9 +17,9 @@
     />
     <title>Booksy</title>
     <script type="module" crossorigin src="/BookStack-Devs-05/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/BookStack-Devs-05/assets/vendor-KPDVCjP5.js">
-    <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/vendor-DMjVsepR.css">
-    <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/index-BUxq24hI.css">
+    <link rel="modulepreload" crossorigin href="/BookStack-Devs-05/assets/vendor-DS9FuNQt.js">
+    <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/vendor-CwSRrs7M.css">
+    <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/index-D0eWqwuA.css">
   </head>
   <body>
     <header class="header">
@@ -94,7 +94,27 @@
     <main>
       <!-- Loads the specified .html file -->
       
-      
+      <section class="section-books">
+  <div class="container">
+    <div>
+      <h2 class="books-title visually-hidden">Trending books</h2>
+      <h3 class="books-subtitle">Books</h3>
+      <span class="books-counter"></span>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Categories</button>
+      <ul class="books-dropdown-menu" hidden></ul>
+    </div>
+    <ul class="books-list"></ul>
+    <p class="empty-message visually-hidden">
+      No books in this category. Please select another one.
+    </p>
+    <button type="button" class="show-more-btn visually-hidden">
+      Show More
+    </button>
+  </div>
+</section>
+
       <section class="feedback-section" id="feedback">
   <div class="container feedback-container">
     <h2 class="feedback-title">Customer Feedbacks</h2>
