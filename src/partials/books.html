@@ -5,8 +5,14 @@
       <h3 class="books-subtitle">Books</h3>
       <span class="books-counter"></span>
     </div>
-    <ul class="books-category-list"></ul>
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Categories</button>
+      <ul class="books-dropdown-menu" hidden></ul>
+    </div>
     <ul class="books-list"></ul>
+    <p class="empty-message visually-hidden">
+      No books in this category. Please select another one.
+    </p>
     <button type="button" class="show-more-btn visually-hidden">
       Show More
     </button>
