@@ -1,8 +1,6 @@
-.container {
+.feedback-container {
     width: 100%;
-    max-width: 375px;
     margin: 0 auto;
-    padding: 0 16px;
     background: #fceee6;
 }
 
@@ -121,10 +119,6 @@
 }
 /* Tablet */
 @media (min-width: 768px) {
-.container {
-    max-width: 768px;
-    padding: 0 32px;
-}
 
 .swiper-slide {
     width: 340px;
@@ -138,10 +132,7 @@
 
 /* Desktop */
 @media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    padding: 0 65px;
-    }
+
 .swiper-slide {
     width: 420px;
     height: 218px !important;

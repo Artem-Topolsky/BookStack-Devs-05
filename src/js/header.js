@@ -1,34 +1,39 @@
-const burgerBtn = document.querySelector(".burger-menu");
-const openNavbar = document.querySelector(".navbar-overlay");
-const closeNavbarBtn = document.querySelector(".close-navbar-btn");
-const choiceSectionInHeader = document.querySelector("ul.header-list")
-const choiceSectionInNavbar = document.querySelector("ul.navbar-list");
-
-burgerBtn.addEventListener("click", clickOpenNavbar);
-closeNavbarBtn.addEventListener("click", closeNavbar);
-
-choiceSectionInNavbar.addEventListener("click", handlerNavbarChoice);
-choiceSectionInHeader.addEventListener("click", handlerHeaderChoice);
-
-function clickOpenNavbar() {
-    openNavbar.classList.remove("is-hidden");
-};
-
-function handlerNavbarChoice(event) {
-    console.dir(event.target.dataset.id);
-    closeNavbar();
-};
-
-function handlerHeaderChoice(event) {
-    console.dir(event.target.dataset.id);
-};
-
-function closeNavbar() {
-    openNavbar.classList.add("is-hidden");
-}
-
-// console.log(window.innerHeight, window.innerWidth);
-
-// console.log(document.documentElement.scrollHeight);
-
-// console.log(document.documentElement.clientHeight);
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerBtn = document.querySelector(".burger-menu");
+    const closeBtn = document.querySelector(".close-navbar-btn");
+    const navbarOverlay = document.querySelector(".navbar-overlay");
+    const navLinks = document.querySelectorAll(".navbar-list a");
+  
+    burgerBtn.addEventListener("click", () => {
+      navbarOverlay.classList.add("active");
+      document.body.classList.add("no-scroll");
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      navbarOverlay.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    });
+  
+    navLinks.forEach(link => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+  
+        const targetId = link.getAttribute("href").slice(1);
+        const targetSection = document.getElementById(targetId);
+  
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+  
+        navbarOverlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+      });
+    });
+  
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768 && navbarOverlay.classList.contains("active")) {
+        navbarOverlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+      }
+    });
+  });
