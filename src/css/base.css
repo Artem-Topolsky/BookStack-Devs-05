@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --main-font: 'Rubik', sans-serif;
   --main-font-weight: 400;
