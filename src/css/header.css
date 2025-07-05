@@ -1,0 +1,125 @@
+.is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 0;
+}
+
+.burger-menu {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.burger-icon {
+    display: block;
+    stroke: #0b0500;
+}
+
+.header-icon {
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-list {
+    display: none;
+}
+
+/* ---- вікно Navbar --- */
+
+.navbar-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ margin-bottom: 40px;
+}
+
+.navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fbeee5;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: }
+
+.navbar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+body.no-scroll {
+    overflow: hidden; }
+
+.close-navbar-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.close-btn-icon {
+    display: block;
+}
+
+.navbar-list-style {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .header-list {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .navbar-overlay {
+        display: none !important;
+    }
+}
