@@ -19,79 +19,84 @@
     <script type="module" crossorigin src="/BookStack-Devs-05/index.js"></script>
     <link rel="modulepreload" crossorigin href="/BookStack-Devs-05/assets/vendor-KPDVCjP5.js">
     <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/vendor-DMjVsepR.css">
-    <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/index-CKC1Q-PV.css">
+    <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/index-BUxq24hI.css">
   </head>
   <body>
     <header class="header">
-    <div class="container header-container">
-        <div class="logo">
-            <a href="../index.html">
-                <svg width="84" height="36">
-                <use href="../img/sprite.svg#icon-booksy-title"></use>
-                </svg>
-            </a>
-            <button type="button" class="burger-menu">
-                <svg class="burger-icon" width="24" height="24">
-                <use href="../img/header/menu-alt-right-opt.svg"></use>
-                </svg>
-            </button>
-        </div>
-        
-        <ul class="header-list">
-            <li class="header-list-style">
-                <a href="#home" data-id="home">Home</a></li>
-            <li class="header-list-style">
-                <a href="#books" data-id="books">Books</a></li>
-            <li class="header-list-style">
-                <a href="#feedback" data-id="feedbacks">Feedbacks</a></li>
-            <li class="header-list-style">
-                <a href="#events" data-id="events">Events</a></li>
-            <li class="header-list-style">
-                <a href="#location" data-id="location">Location</a></li>
-        </ul>
+  <div class="container header-container">
+    <div class="logo">
+      <a href="../index.html">
+        <svg width="84" height="36">
+          <use href="../img/sprite.svg#icon-booksy-title"></use>
+        </svg>
+      </a>
+      <button type="button" class="burger-menu">
+        <svg class="burger-icon" width="24" height="24">
+          <use href="../img/header/menu-alt-right-opt.svg"></use>
+        </svg>
+      </button>
     </div>
 
-    <div class="container navbar-overlay is-hidden">
-        <div class="navbar-top">
-            <a href="../index.html" class="logo-icon">
-                <svg class="heder-icon" width="84" height="36">
-                <use href="../img/sprite.svg#icon-booksy-title"></use>
-                </svg>
-            </a>
-            <button type="button" class="close-navbar-btn">
-                <svg class="close-btn-icon" width="24" height="24">
-                <use href="../img/sprite.svg#icon-close"></use>
-                </svg>
-            </button>
-        </div>
-        <div class="navbar">
-            <ul class="navbar-list">
-                <li class="navbar-list-style" data-id="Home">
-                    <a href="#home" data-id="home">Home</a></li>
-                </li>
-                <li class="navbar-list-style" data-id="Books">
-                    <a href="#books" data-id="books">Books</a></li>
-                </li>
-                <li class="navbar-list-style" data-id="Feedbacks">
-                    <a href="#feedback" data-id="feedbacks">Feedbacks</a>
-                </li>
-                <li class="navbar-list-style" data-id="Events">
-                    <a href="#events" data-id="events">Events</a>
-                </li>
-                <li class="navbar-list-style" data-id="Location">
-                    <a href="#location" data-id="location">Location</a>
-                </li>
-            </ul>
-        </div>
+    <ul class="header-list">
+      <li class="header-list-style"><a href="#home" data-id="home">Home</a></li>
+      <li class="header-list-style">
+        <a href="#books" data-id="books">Books</a>
+      </li>
+      <li class="header-list-style">
+        <a href="#feedback" data-id="feedbacks">Feedbacks</a>
+      </li>
+      <li class="header-list-style">
+        <a href="#events" data-id="events">Events</a>
+      </li>
+      <li class="header-list-style">
+        <a href="#location" data-id="location">Location</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="navbar-overlay">
+    <div class="container">
+      <div class="navbar-top">
+        <a href="../index.html" class="logo-icon">
+          <svg class="heder-icon" width="84" height="36">
+            <use href="../img/sprite.svg#icon-booksy-title"></use>
+          </svg>
+        </a>
+        <button type="button" class="close-navbar-btn">
+          <svg class="close-btn-icon" width="12" height="12">
+            <use href="../img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-list-style">
+            <a href="#home" data-id="home">Home</a>
+          </li>
+          <li class="navbar-list-style">
+            <a href="#books" data-id="books">Books</a>
+          </li>
+          <li class="navbar-list-style">
+            <a href="#feedback" data-id="feedbacks">Feedbacks</a>
+          </li>
+          <li class="navbar-list-style">
+            <a href="#events" data-id="events">Events</a>
+          </li>
+          <li class="navbar-list-style">
+            <a href="#location" data-id="location">Location</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </header>
 
     <main>
       <!-- Loads the specified .html file -->
       
       
-      <section class="feedback-section">
-  <div class="container">
+      <section class="feedback-section" id="feedback">
+  <div class="container feedback-container">
     <h2 class="feedback-title">Customer Feedbacks</h2>
     <p class="feedback-parag">See what our readers are saying about us!</p>
     <div class="swiper feedback-swiper">
@@ -220,33 +225,53 @@
 
       
       <section class="article" id="article">
-
-    <div class="container-article">
-        <div class="text-article">
-            <h1 class="chapter-article">Welcome to Booksy – your cozy corner for handpicked reads.</h1>
-            <p class="paragraf-article">We believe books are more than just stories — they’re companions, doorways, and
-                memories. Whether you’re chasing
-                adventures or quiet moments, we’re here to help you find your next favorite book.</p>
-        </div>
-
-        <picture>
-            <source srcset="/img/article/mobile-article.jpg 1x, /BookStack-Devs-05/assets/tab-article@2x-BY-tff6z.jpg 2x" media="(max-width: 767px)" />
-            <source srcset="/img/article/tab-article.jpg 1x, /BookStack-Devs-05/assets/tab-article@2x-BY-tff6z.jpg 2x" media="(min-width: 768px)" />
-            <source srcset="/img/article/desk-article1280.jpg 1x, /BookStack-Devs-05/assets/desk-article1280@2x-ML5vHDLh.jpg 2x" media="(min-width: 1280px)" />
-            <source srcset="/img/article/desk-article1440.jpg 1x, /BookStack-Devs-05/assets/desk-article1280@2x-ML5vHDLh.jpg 2x" media="(min-width: 1440px)" />
-            <img class="img-article" src="../img/article/desk-article1440@2x.jpg" alt="article" width="768"
-                height="534" />
-        </picture>
+  <div class="container-article container">
+    <div class="text-article">
+      <h1 class="chapter-article">
+        Welcome to Booksy – your cozy corner for handpicked reads.
+      </h1>
+      <p class="paragraf-article">
+        We believe books are more than just stories — they’re companions,
+        doorways, and memories. Whether you’re chasing adventures or quiet
+        moments, we’re here to help you find your next favorite book.
+      </p>
     </div>
+
+    <picture>
+      <source
+        srcset="/img/article/mobile-article.jpg 1x, /BookStack-Devs-05/assets/tab-article@2x-BY-tff6z.jpg 2x"
+        media="(max-width: 767px)"
+      />
+      <source
+        srcset="/img/article/tab-article.jpg 1x, /BookStack-Devs-05/assets/tab-article@2x-BY-tff6z.jpg 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="/img/article/desk-article1280.jpg 1x, /BookStack-Devs-05/assets/desk-article1280@2x-ML5vHDLh.jpg 2x"
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="/img/article/desk-article1440.jpg 1x, /BookStack-Devs-05/assets/desk-article1280@2x-ML5vHDLh.jpg 2x"
+        media="(min-width: 1440px)"
+      />
+      <img
+        class="img-article"
+        src="../img/article/desk-article1440@2x.jpg"
+        alt="article"
+        width="768"
+        height="534"
+      />
+    </picture>
+  </div>
+</section>
+
       
     </main>
 
     <footer class="footer">
   <div class="container">
     <div class="footer-container">
-      <!-- Верхній блок: лого, навігація та форма -->
       <div class="footer-top-wrapper">
-        <!-- Ліва частина -->
         <div class="footer-left-block">
           <a href="/" class="footer-logo-link" aria-label="Booksy Homepage">
             <svg class="footer-logo-icon" width="83" height="21">
@@ -262,14 +287,9 @@
             </ul>
           </nav>
         </div>
-
-        <!-- Права частина -->
         <div class="footer-right-block">
           <p class="footer-form-title">Join</p>
           <form class="footer-subscribe-form" autocomplete="off">
-            <label for="footer-email-subscribe" class="visually-hidden"
-              >Enter your email</label
-            >
             <input
               class="footer-email-input"
               type="text"
@@ -283,10 +303,8 @@
         </div>
       </div>
 
-      <!-- Розділювальна лінія -->
       <hr class="footer-divider" />
 
-      <!-- Нижній блок з копірайтом -->
       <div class="footer-bottom-wrapper">
         <p class="footer-copyright">© 2025 Booksy. All rights reserved.</p>
       </div>
