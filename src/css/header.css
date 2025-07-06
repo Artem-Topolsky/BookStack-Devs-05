@@ -12,6 +12,22 @@
     overflow: hidden
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.header--hidden {
+    transform: translateY(-100%);
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -63,7 +79,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #fbeee5;
-    z-index: 1000;
+    z-index: 50;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -79,7 +95,16 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: }
+    transform: translateY(20px);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;}
+        
+.navbar-overlay.active .navbar {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
 
 .navbar-overlay.active {
     opacity: 1;

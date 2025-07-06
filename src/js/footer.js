@@ -1,33 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.footer-subscribe-form');
-  const emailInput = document.getElementById('footer-email-subscribe');
-  const requiredNote = document.querySelector('.footer-required-note');
-  const submitBtn = document.querySelector('.footer-signup-btn');
-  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
-  function updateButtonState() {
-    if (emailInput.value.trim() === '') {
-      submitBtn.disabled = true;
-    } else {
-      submitBtn.disabled = false;
-    }
-  }
+const form = document.querySelector('.footer-subscribe-form');
+const emailInput = document.getElementById('footer-email-subscribe');
+const submitBtn = document.querySelector('.footer-signup-btn');
+const requiredNote = document.querySelector('.footer-required-note');
 
-  updateButtonState();
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
 
-  emailInput.addEventListener('input', updateButtonState);
-
-  form.addEventListener('submit', function (e) {
-    if (!emailPattern.test(emailInput.value)) {
-      e.preventDefault();
-      requiredNote.textContent = 'Please enter a valid email address.';
-      requiredNote.style.color = 'red';
-      emailInput.value = '';
-      emailInput.focus();
-      updateButtonState();
-    } else {
-      requiredNote.textContent = '* Required field';
-      requiredNote.style.color = '';
-    }
+  iziToast.success({
+    title: 'Success',
+    message: 'Email format is correct',
+    position: 'bottomRight',
+    timeout: 3000,
+    backgroundColor: '#ffffff',
   });
+
+  emailInput.value = '';
+  submitBtn.disabled = true;
+  submitBtn.classList.add('disabled');
 });
