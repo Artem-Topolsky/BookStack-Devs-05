@@ -193,8 +193,8 @@
         height: 521px !important;
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
+    .swiper-btn-events-next,
+    .swiper-btn-events-prev {
         display: none;
     }
 
