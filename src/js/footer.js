@@ -11,7 +11,7 @@ form.addEventListener('submit', function (event) {
 
   iziToast.success({
     title: 'Success',
-    message: 'Email format is incorrect. Example: user@example.com',
+    message: 'Email format is correct',
     position: 'bottomRight',
     timeout: 3000,
     backgroundColor: '#ffffff',
