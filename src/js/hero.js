@@ -4,14 +4,18 @@ import 'swiper/css';
 
 new Swiper('.hero-swiper', {
   modules: [Navigation],
+  spaceBetween: 20,
   loop: false,
-  speed: 600,
-
+  speed: 1500,
+  slidesPerView: 1,
+  touchRatio: 0.7,
+  longSwipesRatio: 0.5,
+  longSwipesMs: 300,
   navigation: {
     nextEl: '.hero-swiper-button-next',
     prevEl: '.hero-swiper-button-prev',
   },
-  slidesPerView: 1,
+
   on: {
     init() {
       toggleButtons(this);
