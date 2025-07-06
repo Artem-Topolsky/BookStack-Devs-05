@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --main-font: 'Rubik', sans-serif;
   --main-font-weight: 400;
@@ -5,6 +8,7 @@
 
 body {
   display: flex;
+  background: #fceee6;
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
