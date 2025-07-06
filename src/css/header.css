@@ -95,7 +95,16 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: }
+    transform: translateY(20px);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;}
+        
+.navbar-overlay.active .navbar {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
 
 .navbar-overlay.active {
     opacity: 1;
