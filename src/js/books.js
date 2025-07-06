@@ -1,5 +1,5 @@
 import axios from 'axios';
-const bookList = document.querySelector('.books-list');
+export const bookList = document.querySelector('.books-list');
 const dropdownMenu = document.querySelector('.books-dropdown-menu');
 const booksCounter = document.querySelector('.books-counter');
 const showMoreBtn = document.querySelector('.show-more-btn');
@@ -12,7 +12,7 @@ const API_CATEGORIES =
 const API_SELECTED_CATEGORY =
   'https://books-backend.p.goit.global/books/category?category';
 
-let allBooks = [];
+export let allBooks = [];
 let visibleCount = Math.min(
   window.innerWidth >= 768 ? 24 : 10,
   allBooks.length
