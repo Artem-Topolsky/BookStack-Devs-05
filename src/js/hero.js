@@ -1,36 +1,32 @@
-import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import Swiper from 'swiper/bundle';
 import 'swiper/css';
+import 'swiper/css/pagination';
 
-new Swiper('.hero-swiper', {
-  modules: [Navigation],
-  spaceBetween: 20,
-  loop: false,
-  speed: 1500,
+const swiper = new Swiper('.hero-swiper', {
   slidesPerView: 1,
-  touchRatio: 0.7,
-  longSwipesRatio: 0.5,
-  longSwipesMs: 300,
+  loop: false,
+  autoHeight: false,
+  observer: true,
+  observeParents: true,
+  watchSlidesProgress: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
   navigation: {
     nextEl: '.hero-swiper-button-next',
     prevEl: '.hero-swiper-button-prev',
   },
-
-  on: {
-    init() {
-      toggleButtons(this);
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
     },
-    slideChange() {
-      toggleButtons(this);
+    1440: {
+      slidesPerView: 1,
     },
   },
 });
-
-function toggleButtons(swiper) {
-  document
-    .querySelector('.hero-swiper-button-prev')
-    .classList.toggle('disabled', swiper.isBeginning);
-  document
-    .querySelector('.hero-swiper-button-next')
-    .classList.toggle('disabled', swiper.isEnd);
-}

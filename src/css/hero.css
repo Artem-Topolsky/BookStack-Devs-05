@@ -1,12 +1,20 @@
+.hero-swiper .swiper-slide {
+  width: 100% !important;
+  flex-shrink: 0;
+}
+.hero-swiper .swiper-wrapper {
+  display: flex;
+}
+
 .hero-section {
   margin-top: 50px;
 }
 
-.swiper {
+.hero-swiper {
   width: 100%;
 }
 
-.swiper-wrapper {
+.hero-wrapper {
   display: flex;
   border-radius: 8px;
 }
