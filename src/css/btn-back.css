@@ -13,7 +13,7 @@
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.3s, transform 0.3s;
-    z-index: 999;
+    z-index: 50;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
