@@ -22,7 +22,7 @@
 }
 
 
-.swiper-slide {
+.swiper-slide-feedbacks {
     height: 314px !important;
     padding: 32px;
     background-color: white;
@@ -120,7 +120,7 @@
 /* Tablet */
 @media (min-width: 768px) {
 
-.swiper-slide {
+.swiper-slide-feedbacks {
     width: 340px;
     height: 244px !important;
     padding: 32px;
@@ -133,7 +133,7 @@
 /* Desktop */
 @media (min-width: 1440px) {
 
-.swiper-slide {
+.swiper-slide-feedbacks {
     width: 420px;
     height: 218px !important;
 } 

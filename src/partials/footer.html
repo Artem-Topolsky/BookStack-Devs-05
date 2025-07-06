@@ -3,11 +3,7 @@
     <div class="footer-container">
       <div class="footer-top-wrapper">
         <div class="footer-left-block">
-          <a
-            href="#header"
-            class="footer-logo-link"
-            aria-label="Booksy Homepage"
-          >
+          <a href="#" class="footer-logo-link" aria-label="Booksy Homepage">
             <svg class="footer-logo-icon" width="83" height="21">
               <use href="/img/sprite.svg#icon-booksy-title"></use>
             </svg>
@@ -26,10 +22,12 @@
           <form class="footer-subscribe-form" autocomplete="off">
             <input
               class="footer-email-input"
-              type="text"
+              type="email"
               id="footer-email-subscribe"
               name="email"
               placeholder="Enter your email"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              required
             />
             <button type="submit" class="footer-signup-btn">Sign Up</button>
           </form>
