@@ -95,6 +95,7 @@
   background: #e15d05;
   fill: #fff;
   cursor: pointer;
+  align-content: center;
 }
 
 .swiper-button-prev.disabled,
