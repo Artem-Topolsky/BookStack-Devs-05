@@ -38,7 +38,7 @@
     </div>
 
     <ul class="header-list">
-      <li class="header-list-style"><a href="#" data-id="home">Home</a></li>
+      <li class="header-list-style"><a href="#hero" data-id="home">Home</a></li>
       <li class="header-list-style">
         <a href="#books" data-id="books">Books</a>
       </li>
@@ -244,94 +244,113 @@
 </section>
 
       <section class="events-section" id="events">
-    <div class="container events-container">
-        <p class="events-events">Events</p>
-        <h2 class="events-title">Upcoming Events at Booksy</h2>
-        <p class="events-parag">Discover readings, workshops, and bookish gatherings — online and offline. Everyone’s
-            welcome.</p>
-        <div class="swiper events-swiper">
-            <ul class="swiper-wrapper swiper-wrapper-events">
-                <li class="swiper-slide swiper-slide-events">
-                    <picture>
-                        <source srcset="/BookStack-Devs-05/assets/events-1@1x-Cp2ao5MS.jpg 1x, /BookStack-Devs-05/assets/events-1@2x-GXeY1EFA.jpg 2x" />
-                        <img src="/BookStack-Devs-05/assets/events-1@1x-Cp2ao5MS.jpg" alt="Cozy book club" class="events-picture" />
-                    </picture>
-                    <div class="events-content">
-                    <h3 class="events-name">
-                        Cozy Book Club — "The Midnight Library"
-                    </h3>
-                    <p class="events-date">In-store | June 5, 6:30 PM</p>
-                    <p class="events-text">Join us for an evening of tea, thoughtful conversation, and shared reflections
-                        as we dive into Matt Haig’s bestseller.
-                    </p>
-                    <button type="button" class="events-button">
-                        Register
-                        <svg width="8" height="12">
-                            <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-right"></use>
-                        </svg>
-                        </div>
-                    </button>
-                </li>
-            <li class="swiper-slide swiper-slide-events">
-                <picture>
-                         <source srcset="/BookStack-Devs-05/assets/events-2@1x-3hUDb9nr.jpg 1x, /BookStack-Devs-05/assets/events-2@2x-CYWfuDcw.jpg 2x" />
-                        <img src="/BookStack-Devs-05/assets/events-2@1x-3hUDb9nr.jpg" alt="Cozy book club" class="events-picture" />
-                </picture>
-                <div class="events-content">
-                    <h3 class="events-name">
-                        Book Cover Design Workshop
-                    </h3>
-                    <p class="events-date">Online | June 12, 7:00 PM</p>
-                    <p class="events-text">A hands-on session for aspiring designers and curious readers. Learn what makes a cover stand out — from concept to
-                    print.
-                    </p>
-                    <button type="button" class="events-button">
-                        Register
-                        <svg width="8" height="12">
-                            <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-right"></use>
-                        </svg>
-                </div>
-                </button>
-            </li>
-                <li class="swiper-slide swiper-slide-events">
-                    <picture>
-                        <source srcset="/BookStack-Devs-05/assets/events-3@1x-DAT79tqV.jpg 1x, /BookStack-Devs-05/assets/events-3@2x-DU5PcMSg.jpg 2x" />
-                        <img src="/BookStack-Devs-05/assets/events-3@1x-DAT79tqV.jpg" alt="Cozy book club" class="events-picture" />
-                    </picture>
-                    <div class="events-content">
-                        <h3 class="events-name">
-                            Children’s Story Hour
-                        </h3>
-                        <p class="events-date">In-store | June 15, 11:00 AM</p>
-                        <p class="events-text">A magical morning of stories, games, and imagination for our youngest book lovers (ages 4–8).
-                        </p>
-                        <button type="button" class="events-button">
-                            Register
-                            <svg width="8" height="12">
-                                <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-right"></use>
-                            </svg>
-                    </div>
-                    </button>
-                </li>
-            </ul>
-            <div class="pagination-container">
-                <div class="nav-buttons">
-                    <button class="swiper-button-prev" aria-label="Previous slide">
-                        <svg class="icon icon-prev" aria-hidden="true">
-                            <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-back"></use>
-                        </svg>
-                    </button>
-                    <button class="swiper-button-next" aria-label="Next slide">
-                        <svg class="icon icon-next" aria-hidden="true">
-                            <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-next"></use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
+  <div class="container">
+    <p class="events-events">Events</p>
+    <h2 class="events-title">Upcoming Events at Booksy</h2>
+    <p class="events-parag">
+      Discover readings, workshops, and bookish gatherings — online and offline.
+      Everyone’s welcome.
+    </p>
+    <div class="swiper events-swiper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+          <picture>
+            <source
+              srcset="/BookStack-Devs-05/assets/events-1@1x-Cp2ao5MS.jpg 1x, /BookStack-Devs-05/assets/events-1@2x-GXeY1EFA.jpg 2x"
+            />
+            <img
+              src="/BookStack-Devs-05/assets/events-1@1x-Cp2ao5MS.jpg"
+              alt="Cozy book club"
+              class="events-picture"
+            />
+          </picture>
+          <div class="events-content">
+            <h3 class="events-name">Cozy Book Club — "The Midnight Library"</h3>
+            <p class="events-date">In-store | June 5, 6:30 PM</p>
+            <p class="events-text">
+              Join us for an evening of tea, thoughtful conversation, and shared
+              reflections as we dive into Matt Haig’s bestseller.
+            </p>
+            <button type="button" class="events-button">
+              Register
+              <svg width="8" height="12">
+                <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <picture>
+            <source
+              srcset="/BookStack-Devs-05/assets/events-2@1x-3hUDb9nr.jpg 1x, /BookStack-Devs-05/assets/events-2@2x-CYWfuDcw.jpg 2x"
+            />
+            <img
+              src="/BookStack-Devs-05/assets/events-2@1x-3hUDb9nr.jpg"
+              alt="Cozy book club"
+              class="events-picture"
+            />
+          </picture>
+          <div class="events-content">
+            <h3 class="events-name">Book Cover Design Workshop</h3>
+            <p class="events-date">Online | June 12, 7:00 PM</p>
+            <p class="events-text">
+              A hands-on session for aspiring designers and curious readers.
+              Learn what makes a cover stand out — from concept to print.
+            </p>
+            <button type="button" class="events-button">
+              Register
+              <svg width="8" height="12">
+                <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <picture>
+            <source
+              srcset="/BookStack-Devs-05/assets/events-3@1x-DAT79tqV.jpg 1x, /BookStack-Devs-05/assets/events-3@2x-DU5PcMSg.jpg 2x"
+            />
+            <img
+              src="/BookStack-Devs-05/assets/events-3@1x-DAT79tqV.jpg"
+              alt="Cozy book club"
+              class="events-picture"
+            />
+          </picture>
+          <div class="events-content">
+            <h3 class="events-name">Children’s Story Hour</h3>
+            <p class="events-date">In-store | June 15, 11:00 AM</p>
+            <p class="events-text">
+              A magical morning of stories, games, and imagination for our
+              youngest book lovers (ages 4–8).
+            </p>
+            <button type="button" class="events-button">
+              Register
+              <svg width="8" height="12">
+                <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div class="pagination-container">
+        <div class="nav-buttons">
+          <button class="swiper-button-prev" aria-label="Previous slide">
+            <svg class="icon icon-prev" aria-hidden="true">
+              <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-back"></use>
+            </svg>
+          </button>
+          <button class="swiper-button-next" aria-label="Next slide">
+            <svg class="icon icon-next" aria-hidden="true">
+              <use href="/BookStack-Devs-05/assets/sprite-r4dQ_kAV.svg#icon-arrow-next"></use>
+            </svg>
+          </button>
         </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
+  </div>
 </section>
+
       <section class="article" id="article">
   <div class="container-article container">
     <div class="text-article">
