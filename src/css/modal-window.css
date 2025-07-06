@@ -1,0 +1,274 @@
+/* #region mobile */
+
+/* mobile */
+.modal-backdrop {
+    min-width: 320px;
+    max-width: 375px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* mobile 2 */
+
+
+
+
+.hidden {
+    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.25);
+    min-width: 320px;
+    max-width: 767px;
+    padding: 32px 16px;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.modal {
+    background-color: #fceee6;
+    border-radius: 16px;
+    padding: 64px 16px;
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    max-width: 375px;
+    min-width: 320px;
+    overflow-y: auto;
+    z-index: 99;
+    height: 100vh;
+
+
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    fill: #0b0500;
+}
+
+.modal-content-image img {
+    margin: 0 auto;
+}
+
+.modal-content {
+    width: 343px;
+}
+
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.accordion .accordion-body {
+    display: none;
+}
+
+.accordion .accordion-body.active {
+    display: block;
+}
+
+.book-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: #0b0500;
+    margin-top: 24px;
+}
+
+.book-author {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #0b0500;
+    margin-top: 8px;
+}
+
+.book-price {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #0b0500;
+    margin-top: 8px;
+}
+
+.quantity-control-minus,
+.quantity-control-plus {
+    border: 1px solid #0b0500;
+    border-radius: 4px;
+    background-color: #fceee6;
+    padding: 8px 11px;
+    width: 32px;
+    height: 40px;
+    text-align: center;
+    color: #0b0500;
+}
+
+.quantity-control-value {
+    width: 42px;
+    height: 40px;
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: rgba(11, 5, 0, 0.05);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #0b0500;
+}
+
+.formBtn-add {
+    border: 1px solid #e15d05;
+    background-color: #e15d05;
+    color: white;
+    border-radius: 4px;
+    padding: 12px 24px;
+    width: 311px;
+    height: 48px;
+    margin-top: 16px;
+}
+
+.formBtn-buy {
+    width: 311px;
+    height: 48px;
+    border: 1px solid #0b0500;
+    border-radius: 4px;
+    background-color: #fceee6;
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #0b0500;
+    margin-top: 24px;
+}
+
+.accordion-header {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    background-color: #fceee6;
+    color: #0b0500;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: start;
+}
+
+.ac-header {
+    background-color: #fceee6;
+}
+
+.accordion-header-text {
+    width: 275px;
+
+}
+
+.accordion-header-icon {
+    margin-left: 12px;
+
+}
+
+.accordion-item {
+    border-top: 1px solid rgba(11, 5, 0, 0.15);
+
+    width: 311px;
+    margin-top: 32px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+
+    .formBtn-add,
+    .formBtn-buy,
+    .accordion-item {
+        width: 270px;
+    }
+
+}
+
+/* #endregion */
+
+/* #region tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .modal-backdrop {
+        min-width: 768px;
+        max-width: 1439px;
+    }
+
+    .modal-content-all {
+        display: flex;
+    }
+
+    .modal {
+        max-width: 704px;
+    }
+
+    .modal-content-image {
+        width: 309px;
+        margin-right: 24px;
+    }
+
+    .modal-content {
+        width: 307px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .modal-backdrop {
+        min-width: 1440px;
+        max-width: 100%;
+    }
+
+    .modal-content-all {
+        display: flex;
+    }
+
+    .modal {
+        max-width: 1300px;
+        width: 1300px;
+        margin: 0 auto;
+    }
+
+    .modal-content-image {
+        width: 309px;
+        margin-right: 24px;
+    }
+
+    .modal-content-all {
+        width: 1092px;
+        margin: 0 auto;
+    }
+
+    .modal-content {
+        width: 759px;
+
+    }
+
+    .accordion-item {
+        width: 759px;
+    }
+
+}
