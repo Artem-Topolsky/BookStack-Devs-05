@@ -2,6 +2,9 @@
   --footer-text: #0b0500;
   --footer-text-hover: #ffffff;
   --footer-placeholder: rgba(11, 5, 0, 0.6);
+  --footer-bg: #ea8d50;
+  --footer-border: rgba(11, 5, 0, 0.15);
+  --footer-divider: rgba(255, 225, 225, 0.2);
   --transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -12,10 +15,9 @@ body {
   box-sizing: border-box;
 }
 
-
 .footer {
   color: var(--footer-text);
-  background: #ea8d50;
+  background: var(--footer-bg);
 }
 
 .container {
@@ -66,8 +68,6 @@ body {
 .footer-nav-item a {
   color: var(--footer-text);
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
   transition: color var(--transition-main);
   cursor: pointer;
 }
@@ -86,7 +86,6 @@ body {
 }
 
 .footer-form-title {
-  font-size: 16px;
   font-weight: 600;
   margin: 0 0 16px 0;
   text-align: left;
@@ -104,12 +103,11 @@ body {
   max-width: 221px;
   min-width: 0;
   height: 48px;
-  padding: 12px 12px;
-  border: 1px solid rgba(11, 5, 0, 0.15);
+  padding: 12px;
+  border: 1px solid var(--footer-border);
   border-radius: 4px;
-  background-color: rgba(11, 5, 0, 0.15);
+  background-color: var(--footer-border);
   color: var(--footer-text);
-  font-size: 16px;
   box-sizing: border-box;
   outline: none;
 }
@@ -121,12 +119,10 @@ body {
 .footer-signup-btn {
   width: 106px;
   height: 48px;
-  border: 1px solid #0b0500;
+  border: 1px solid var(--footer-text);
   border-radius: 4px;
   background-color: transparent;
   color: var(--footer-text);
-  font-size: 16px;
-  font-weight: 400;
   cursor: pointer;
   transition:
     color var(--transition-main),
@@ -164,7 +160,7 @@ body {
 .footer-divider {
   border: none;
   height: 1px;
-  background-color: rgba(255, 225, 225, 0.2);
+  background-color: var(--footer-divider);
   margin: 80px 0 32px;
   opacity: 0.5;
 }
@@ -175,7 +171,6 @@ body {
 
 .footer-copyright {
   font-size: 14px;
-  font-weight: 400;
   text-align: center;
   margin: 0;
 }
@@ -197,7 +192,6 @@ body {
 
   .footer-nav-list {
     flex-direction: row;
-    gap: 32px;
     justify-content: center;
     width: 100%;
   }
@@ -241,9 +235,7 @@ body {
   }
 
   .footer-required-note {
-    font-size: 12px;
     margin: 12px 0 0 0;
-    text-align: left;
   }
 }
 
@@ -257,10 +249,7 @@ body {
   }
 
   .footer-left-block {
-    flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
-    margin-bottom: 0;
     min-width: 324px;
   }
 
@@ -269,8 +258,6 @@ body {
   }
 
   .footer-nav-list {
-    flex-direction: row;
-    gap: 32px;
     justify-content: flex-start;
     width: auto;
   }
@@ -301,16 +288,10 @@ body {
   }
 
   .footer-email-input {
-    width: 100%;
     min-width: 278px;
-    font-size: 16px;
-    padding: 12px;
-    border-radius: 4px;
   }
 
   .footer-signup-btn {
-    width: 106px;
-    height: 48px;
     font-size: 18px;
     border-radius: 4px;
   }
