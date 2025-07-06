@@ -2,14 +2,14 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
-new Swiper('.mySwiper', {
+new Swiper('.hero-swiper', {
   modules: [Navigation],
   loop: false,
   speed: 600,
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.hero-swiper-button-next',
+    prevEl: '.hero-swiper-button-prev',
   },
   slidesPerView: 1,
   on: {
@@ -24,9 +24,9 @@ new Swiper('.mySwiper', {
 
 function toggleButtons(swiper) {
   document
-    .querySelector('.swiper-button-prev')
+    .querySelector('.hero-swiper-button-prev')
     .classList.toggle('disabled', swiper.isBeginning);
   document
-    .querySelector('.swiper-button-next')
+    .querySelector('.hero-swiper-button-next')
     .classList.toggle('disabled', swiper.isEnd);
 }
