@@ -5,16 +5,12 @@
   --transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 html,
 body {
   width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
 }
-
-
-   /* * ОНОВЛЕНІ СТИЛІ ДЛЯ СМАРТФОНІВ (Mobile First: 320px+) */
 
 
 .footer {
@@ -31,7 +27,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 80px 0px;
-    background: #ea8d50;
+  background: #ea8d50;
   box-sizing: border-box;
 }
 
@@ -144,6 +140,20 @@ body {
   background-color: var(--footer-text);
 }
 
+.footer-signup-btn.disabled {
+  background-color: #ccc;
+  color: #888;
+  border-color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.footer-signup-btn.disabled:hover,
+.footer-signup-btn.disabled:focus {
+  background-color: #ccc;
+  color: #888;
+}
+
 .footer-required-note {
   font-size: 12px;
   margin-top: 12px;
@@ -170,42 +180,44 @@ body {
   margin: 0;
 }
 
-
 /* ПЛАНШЕТ З 768px */
-
 @media (min-width: 768px) {
-
   .footer-top-wrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 32px;
   }
+
   .footer-left-block {
     flex-direction: column;
     align-items: center;
     gap: 32px;
   }
+
   .footer-nav-list {
     flex-direction: row;
     gap: 32px;
     justify-content: center;
     width: 100%;
   }
+
   .footer-right-block {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
     align-items: flex-start;
     text-align: left;
-    padding: 0; 
+    padding: 0;
   }
+
   .footer-form-title {
     font-size: 16px;
     margin: 0 0 16px 0;
     text-align: left;
     font-weight: 600;
   }
+
   .footer-subscribe-form {
     flex-direction: row;
     align-items: center;
@@ -213,6 +225,7 @@ body {
     width: 100%;
     max-width: 400px;
   }
+
   .footer-email-input {
     width: 100%;
     max-width: 278px;
@@ -220,11 +233,13 @@ body {
     padding: 12px;
     border-radius: 4px;
   }
+
   .footer-signup-btn {
     width: 106px;
     font-size: 16px;
     border-radius: 4px;
   }
+
   .footer-required-note {
     font-size: 12px;
     margin: 12px 0 0 0;
@@ -233,15 +248,14 @@ body {
 }
 
 /* ДЕСКТОП З 1440px */
-
 @media (min-width: 1440px) {
-
   .footer-top-wrapper {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     text-align: left;
   }
+
   .footer-left-block {
     flex-direction: column;
     align-items: flex-start;
@@ -249,15 +263,18 @@ body {
     margin-bottom: 0;
     min-width: 324px;
   }
+
   .footer-logo-link {
     margin-bottom: 0;
   }
+
   .footer-nav-list {
     flex-direction: row;
     gap: 32px;
     justify-content: flex-start;
     width: auto;
   }
+
   .footer-right-block {
     width: 400px;
     max-width: 600px;
@@ -267,12 +284,14 @@ body {
     display: flex;
     flex-direction: column;
   }
+
   .footer-form-title {
     font-size: 16px;
     margin: 0 0 16px 0;
     text-align: left;
     font-weight: 600;
   }
+
   .footer-subscribe-form {
     flex-direction: row;
     align-items: center;
@@ -280,6 +299,7 @@ body {
     width: 100%;
     min-width: 278px;
   }
+
   .footer-email-input {
     width: 100%;
     min-width: 278px;
@@ -287,18 +307,23 @@ body {
     padding: 12px;
     border-radius: 4px;
   }
+
   .footer-signup-btn {
     width: 106px;
     height: 48px;
     font-size: 18px;
     border-radius: 4px;
   }
+
   .footer-required-note {
     font-size: 12px;
     margin: 12px 0 0 0;
     text-align: left;
   }
+
   .footer-divider {
     margin: 80px 0 32px;
   }
 }
+
+

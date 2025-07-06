@@ -12,11 +12,6 @@
     overflow: hidden
 }
 
-body {
-    padding-top: 70px;
-    /* подстрой под реальную высоту хедера */
-}
-
 .header {
     position: fixed;
     top: 0;
