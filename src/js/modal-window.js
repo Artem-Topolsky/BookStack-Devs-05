@@ -20,8 +20,30 @@ function handleBookClick(event) {
   openModal(bookId);
 }
 
+//  svg
+
+function injectSvgSprite() {
+  // Перевіримо, чи спрайт вже вставлено
+  if (document.getElementById('svgSpriteContainer')) return;
+
+  fetch('/img/sprite.svg')
+    .then(res => res.text())
+    .then(svg => {
+      const div = document.createElement('div');
+      div.id = 'svgSpriteContainer';
+      div.style.display = 'none';
+      div.innerHTML = svg;
+      document.body.insertBefore(div, document.body.firstChild);
+    })
+    .catch(error =>
+      console.error('❌ Не вдалося завантажити SVG спрайт:', error)
+    );
+}
+///////////
+
 // Відкриваємо модалку з книгою
 function openModal(bookId) {
+  injectSvgSprite(); // svg sprite
   const selectedBook = allBooks.find(book => book._id === bookId);
 
   if (!selectedBook) {
