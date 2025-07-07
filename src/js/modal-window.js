@@ -62,7 +62,7 @@ function markupModalWindow({ author, book_image, title, price, description }) {
       <div class="modal" id="bookModal">
         <button class="modal-close" id="modalCloseBtn">
           <svg class="modal-close-icon" width="14" height="14">
-            <use href="/img/sprite.svg#icon-close"></use>
+            <use href="/sprite.svg#icon-close"></use>
           </svg>
         </button>
 
@@ -80,7 +80,7 @@ function markupModalWindow({ author, book_image, title, price, description }) {
             <div class="quantity-control">
               <button class="quantity-control-minus" id="decrease">
                 <svg width="8" height="8">
-                  <use href="/img/sprite.svg#icon-minus"></use>
+                  <use href="/sprite.svg#icon-minus"></use>
                 </svg>
               </button>
 
@@ -88,7 +88,7 @@ function markupModalWindow({ author, book_image, title, price, description }) {
 
               <button class="quantity-control-plus" id="increase">
                 <svg width="8" height="8">
-                  <use href="/img/sprite.svg#icon-plus"></use>
+                  <use href="/sprite.svg#icon-plus"></use>
                 </svg>
               </button>
             </div>
@@ -107,12 +107,12 @@ function markupModalWindow({ author, book_image, title, price, description }) {
         <span>Description</span>
         <span class="trigger-down">
           <svg width="20" height="14">
-            <use href='/img/sprite.svg#icon-arrow-down'></use>
+            <use href='/sprite.svg#icon-arrow-down'></use>
           </svg>
         </span>
         <span class="trigger-up hidden">
           <svg width="20" height="14">
-            <use href='/img/sprite.svg#icon-arrow-up'></use>
+            <use href='/sprite.svg#icon-arrow-up'></use>
           </svg>
         </span>
       </button>
@@ -128,12 +128,12 @@ function markupModalWindow({ author, book_image, title, price, description }) {
         <span>Shipping</span>
         <span class="trigger-down">
           <svg width="20" height="14">
-            <use href='/img/sprite.svg#icon-arrow-down'></use>
+            <use href='/sprite.svg#icon-arrow-down'></use>
           </svg>
         </span>
         <span class="trigger-up hidden">
           <svg width="20" height="14">
-            <use href='/img/sprite.svg#icon-arrow-up'></use>
+            <use href='/sprite.svg#icon-arrow-up'></use>
           </svg>
         </span>
       </button>
@@ -153,12 +153,12 @@ function markupModalWindow({ author, book_image, title, price, description }) {
         <span>Returns</span>
         <span class="trigger-down">
           <svg width="20" height="14">
-            <use href='/img/sprite.svg#icon-arrow-down'></use>
+            <use href='/sprite.svg#icon-arrow-down'></use>
           </svg>
         </span>
         <span class="trigger-up hidden">
           <svg width="20" height="14">
-            <use href='/img/sprite.svg#icon-arrow-up'></use>
+            <use href='/sprite.svg#icon-arrow-up'></use>
           </svg>
         </span>
       </button>

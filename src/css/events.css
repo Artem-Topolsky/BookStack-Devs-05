@@ -79,6 +79,7 @@
   align-items: center;
   margin-top: auto;
   padding-left: 0;
+  transition: font-weight 0.1s;
 }
 
 .events-button:hover {
