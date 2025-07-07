@@ -6,3 +6,4 @@ import './js/header.js';
 import './js/hero.js';
 import './js/modal-window.js';
 import './js/btn-back-to-start.js';
+import './js/modal-registration.js';
