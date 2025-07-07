@@ -23,7 +23,7 @@
   visibility: hidden;
 }
 
-.modal {
+.modal-registr {
   position: relative;
   background-color: #fceee6;
   width: 344px;
@@ -64,7 +64,7 @@
 
 /* Tablet */
 @media (min-width: 768px) {
-  .modal {
+  .modal-registr {
     width: 704px;
     padding: 64px 32px;
   }
@@ -76,7 +76,7 @@
 
 /* Desktop */
 @media (min-width: 1440px) {
-  .modal {
+  .modal-registr {
     width: 866px;
     padding: 64px;
   }
