@@ -114,7 +114,10 @@
   fill: #fff;
   cursor: pointer;
   align-content: center;
-}
+  transition:
+      background 0.3s ease,
+      fill 0.3s ease;
+  }
 
 .hero-swiper-button-prev.disabled,
 .hero-swiper-button-next.disabled {
