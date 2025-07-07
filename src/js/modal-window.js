@@ -8,23 +8,19 @@ injectSvgSprite();
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-import { bookList, allBooks } from './books'; // масив книг та контейнер списку
+import { bookList, allBooks } from './books';
 
-//  Слухач на  "Learn More" у списку книг
 bookList.addEventListener('click', handleBookClick);
 
-//  Контейнер для вставки модального вікна
 const containerModalWindow = document.querySelector('.container-modal-window');
 
 function handleBookClick(event) {
   if (!event.target.classList.contains('learn-more-btn')) return;
   const bookId = event.target.dataset.bookId;
   console.log('ID книги:', bookId);
-
   openModal(bookId);
 }
 
-// Відкриваємо модалку з книгою
 function openModal(bookId) {
   const selectedBook = allBooks.find(book => book._id === bookId);
 
@@ -33,11 +29,13 @@ function openModal(bookId) {
     return;
   }
 
-  markupModalWindow(selectedBook); // малюємо розмітку
-  updateTotalPrice();
+  markupModalWindow(selectedBook);
+  const modal = document.getElementById('bookModal');
+  modal.classList.add('show');
+  const backdrop = document.getElementById('modalBackdrop');
+  backdrop.classList.add('show');
 }
 
-// створити розмітку та знайти елементи та слухачі
 function markupModalWindow({ author, book_image, title, price, description }) {
   containerModalWindow.innerHTML = `
     <div class="modal-backdrop container" id="modalBackdrop">
@@ -57,7 +55,6 @@ function markupModalWindow({ author, book_image, title, price, description }) {
             <p class="book-author" id="bookAuthor">${author}</p>
             <p class="book-price" id="bookPrice">$${price}</p>
             <p class="book-total" id="bookTotalPrice">Total: $${price}</p>
-
 
             <div class="quantity-control">
               <button class="quantity-control-minus" id="decrease">
@@ -79,7 +76,6 @@ function markupModalWindow({ author, book_image, title, price, description }) {
               <button class="formBtn-add" type="button" id="addToCart">Add to Cart</button>
               <button class="formBtn-buy" type="submit">Buy Now</button>
             </form>
-
                  
 <div class="accordion" id="accordionContainer">
   
@@ -157,14 +153,12 @@ function markupModalWindow({ author, book_image, title, price, description }) {
 
 </div>
 
-
           </div>
         </div>
       </div>
     </div>
   `;
 
-  // знайти  елементи
   const backdrop = document.getElementById('modalBackdrop');
   const modal = document.getElementById('bookModal');
   const closeBtn = document.getElementById('modalCloseBtn');
@@ -175,30 +169,25 @@ function markupModalWindow({ author, book_image, title, price, description }) {
   const buyForm = document.getElementById('buyForm');
   const messageBox = document.getElementById('message');
 
-  // Заборона скролу
   document.body.style.overflow = 'hidden';
   document.documentElement.style.overflow = 'hidden';
 
-  // код аккордеона
   new Accordion('#accordionContainer', {
     duration: 300,
     showMultiple: false,
     openOnInit: [],
   });
 
-  // вгору та вниз
   const triggerButtons = containerModalWindow.querySelectorAll('.ac-trigger');
 
   triggerButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      //  час оновити .is-active
       setTimeout(() => {
         triggerButtons.forEach(otherBtn => {
           const otherAc = otherBtn.closest('.ac');
           const up = otherBtn.querySelector('.trigger-up');
           const down = otherBtn.querySelector('.trigger-down');
 
-          //коли клік (актів) на кнопку додаємо або прибираємо
           if (otherAc.classList.contains('is-active')) {
             up.classList.remove('hidden');
             down.classList.add('hidden');
@@ -207,24 +196,19 @@ function markupModalWindow({ author, book_image, title, price, description }) {
             down.classList.remove('hidden');
           }
         });
-      }, 10); // затримка
+      }, 10);
     });
   });
 
-  ////////////////
-
-  //  Слухачі
-  closeBtn.addEventListener('click', closeModal); // хрестик
+  closeBtn.addEventListener('click', closeModal);
 
   backdrop.addEventListener('click', e => {
-    //  бекдроп
     if (e.target === backdrop) {
       closeModal();
     }
   });
 
   document.addEventListener(
-    //  ескейп
     'keydown',
     e => {
       if (e.key === 'Escape') {
@@ -233,8 +217,6 @@ function markupModalWindow({ author, book_image, title, price, description }) {
     },
     { once: true }
   );
-
-  // + and -
 
   increaseBtn.addEventListener('click', () => {
     quantityInput.value = parseInt(quantityInput.value) + 1;
@@ -268,7 +250,6 @@ function markupModalWindow({ author, book_image, title, price, description }) {
     });
   });
 
-  // розрахунок загальної вартості
   const bookTotal = document.getElementById('bookTotalPrice');
 
   function updateTotalPrice() {
@@ -278,11 +259,13 @@ function markupModalWindow({ author, book_image, title, price, description }) {
   }
 }
 
-// Закриття модалки
 function closeModal() {
   const backdrop = document.getElementById('modalBackdrop');
   backdrop.classList.add('hidden');
-  // Відновити скрол
+  backdrop.classList.remove('show');
+  const modal = document.getElementById('bookModal');
+  modal.classList.remove('show');
+
   document.body.style.overflow = '';
   document.documentElement.style.overflow = '';
 }
