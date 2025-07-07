@@ -106,6 +106,7 @@
 .hero-swiper-button-prev,
 .hero-swiper-button-next {
   border: 1px solid rgba(11, 5, 0, 0.15);
+  border-radius: 4px;
   padding: 12px;
   width: 48px;
   height: 48px;
