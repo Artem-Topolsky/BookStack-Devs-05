@@ -8,9 +8,347 @@
 
     white-space: nowrap;
     clip-path: inset(100%);
-    clip: rect(0 0 0 0);
     overflow: hidden;
     outline: 0;
     outline-offset: 0;
     pointer-events: none;
+}
+
+.books-cont {
+    background-color: #fbeee5;
+    padding-bottom: 32px;
+}
+
+.books-title-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.books-subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.50;
+    color: #0b0500;
+}
+
+.books-counter {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.50;
+}
+
+.dropdown-btn {
+    position: relative;
+    text-align: left;
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 342px;
+    height: 43px;
+    background: rgba(11, 5, 0, 0.05);
+    margin-bottom: 4px;
+}
+
+.btn-icon-categories {
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.books-dropdown-menu {
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: 4px;
+    width: 342px;
+    max-height: 296px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0px;
+    background: rgba(11, 5, 0, 0.05);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #e15d05 rgba(11, 5, 0, 0.15);
+}
+
+.books-dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.books-dropdown-menu::-webkit-scrollbar-track {
+    background: rgba(11, 5, 0, 0.15);
+}
+
+.books-dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #e15d05;
+    border-radius: 4px;
+}
+
+.books-dropdown-menu li {
+    padding: 8px 12px;
+    width: 342px;
+    height: 37px;
+    line-height: 1.5;
+    color: #0b0500;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.books-dropdown-menu li.is-active {
+    background-color: rgba(11, 5, 0, 0.05);
+    ;
+}
+
+.books-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.book-list-card {
+    max-width: 343px;
+    min-height: 150px;
+    position: relative;
+}
+
+.books-card-img {
+    border-radius: 8px;
+    width: 343px;
+    height: 487px;
+    margin-bottom: 16px;
+}
+
+.books-card-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #0b0500;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 184px;
+}
+
+.books-card-author {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.books-card-price {
+    position: absolute;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    right: 0;
+    bottom: 70px;
+
+}
+
+.learn-more-btn {
+    border: 1px solid #0b0500;
+    border-radius: 4px;
+    padding: 8px 20px;
+    width: 343px;
+    height: 40px;
+    background: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
+    transition: background 250ms ease-in-out, border 250ms ease-in-out;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus {
+    border: 1px solid #0b0500;
+    background: #ea8d50;
+}
+
+.show-more-btn {
+    border: 1px solid #e15d05;
+    border-radius: 4px;
+    padding: 12px 24px;
+    width: 342px;
+    height: 48px;
+    background: #e15d05;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 24px;
+    transition: background 250ms ease-in-out, border 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.show-more-btn:hover,
+.show-more-btn:focus {
+    background: #0b0500;
+    border: 1px solid #0b0500;
+}
+
+.show-more-btn:disabled {
+    background: #0b0500;
+    opacity: 0.2;
+    border: 1px solid #0b0500;
+}
+
+.empty-message {
+    margin-top: 45px;
+    text-align: center;
+    max-width: 342px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #b44a04;
+}
+
+@media screen and (min-width: 768px) {
+    .books-navigation-cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-top: 32px;
+    }
+
+    .books-title-cont {
+        margin-bottom: 0;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .dropdown-btn {
+        border-radius: 8px;
+        width: 249px;
+    }
+
+    .books-dropdown-menu {
+        max-width: 249px;
+        overflow-x: auto;
+    }
+
+    .books-list {
+        margin-top: 32px;
+        gap: 40px 24px;
+    }
+
+    .book-list-card {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .learn-more-btn {
+        width: 340px;
+        height: 40px;
+    }
+
+    .show-more-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .empty-message {
+        width: 100%;
+        align-self: center;
+        text-align: center;
+        margin: 45px auto;
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .books-cont {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .books-navigation-cont {
+        max-width: 308px;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex: 0 0 308px;
+        min-height: 100%;
+
+    }
+
+    .book-list-cont {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .books-counter {
+        white-space: nowrap;
+        min-width: 100px;
+        text-align: right;
+    }
+
+    .books-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 24px;
+        align-items: start;
+        min-height: 600px;
+    }
+
+    .book-list-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .learn-more-btn {
+        display: block;
+        width: 227px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .books-card-img {
+        width: 100%;
+        object-fit: cover;
+        height: 323px;
+    }
+
+    .books-dropdown-menu li {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .books-dropdown-menu {
+        border: none;
+        border-radius: 0;
+        max-width: 308px;
+        max-height: 100vh;
+        background: transparent;
+    }
+
+    .books-title-cont {
+        height: 30px;
+    }
+
+    .show-more-btn {
+        display: block;
+        width: 342px;
+    }
+
+    .empty-message {
+        font-size: 30px;
+    }
 }
