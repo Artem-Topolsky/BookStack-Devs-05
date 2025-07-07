@@ -90,14 +90,25 @@
   border: none;
   cursor: pointer;
   padding: 4px;
+  transition: transform 0.2s ease;
 }
 
 .register-icon-close {
   width: 12px;
   height: 12px;
   stroke: #000;
+  transition: stroke 0.2s ease;
 }
 
+.register-modal-close:hover {
+  transform: scale(1.5);
+}
+
+.register-modal-close:hover .register-icon-close {
+  stroke: #e15d05;
+  fill:#e15d05;
+
+}
 .register-title {
   font-weight: 600;
   font-size: 48px;
