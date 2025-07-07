@@ -76,13 +76,13 @@ async function loadBooksByCategory(category) {
         allBooks = books;
         if (!Array.isArray(books) || books.length === 0) {
             bookList.innerHTML = '';
-            bookList.style.display = 'none';
+            bookList.classList.add('hidden');
             emptyMessage.classList.remove('visually-hidden');
             booksCounter.textContent = '0 books available';
             showMoreBtn.classList.add('visually-hidden');
             return;
         } else {
-            bookList.style.display = 'grid';
+            bookList.classList.remove('hidden');
             emptyMessage.classList.add('visually-hidden');
         }
 
