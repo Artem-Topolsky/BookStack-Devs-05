@@ -14,11 +14,9 @@ const containerModalWindow = document.querySelector('.container-modal-window');
 
 function handleBookClick(event) {
   if (!event.target.classList.contains('learn-more-btn')) return;
-
   const bookId = event.target.dataset.bookId;
   console.log('ID книги:', bookId);
 
-  document.body.style.overflow = 'hidden'; // Заборона скролу
   openModal(bookId);
 }
 
@@ -32,6 +30,7 @@ function openModal(bookId) {
   }
 
   markupModalWindow(selectedBook); // малюємо розмітку
+  updateTotalPrice();
 }
 
 // створити розмітку та знайти елементи та слухачі
@@ -53,6 +52,8 @@ function markupModalWindow({ author, book_image, title, price, description }) {
             <h2 class="book-title" id="bookTitle">${title}</h2>
             <p class="book-author" id="bookAuthor">${author}</p>
             <p class="book-price" id="bookPrice">$${price}</p>
+            <p class="book-total" id="bookTotalPrice">Total: $${price}</p>
+
 
             <div class="quantity-control">
               <button class="quantity-control-minus" id="decrease">
@@ -75,69 +76,84 @@ function markupModalWindow({ author, book_image, title, price, description }) {
               <button class="formBtn-buy" type="submit">Buy Now</button>
             </form>
 
-                  <div class="accordion" id="accordionContainer">
-
-
-                  <div class="accordion-item ac" id="ac-0">
-                  <h2 class="ac-header">
-                      <button class="accordion-header ac-trigger">
-                          <span class="accordion-header-text">Description</span>
-                          <span class="accordion-header-icon">
-                              <svg width="20" height="14">
-                                  <use href='/img/sprite.svg#icon-arrow-down'></use>
-                              </svg>
-                          </span>
-                      </button>
-                  </h2>
-                  <div class="accordion-body ac-panel" id="bookDetails"><p>${description}</p></div>
-              </div>
-
-
-
-<div class="accordion-item ac" id="ac-1">
+                 
+<div class="accordion" id="accordionContainer">
+  
+    <div class="ac">
     <h2 class="ac-header">
-        <button class="accordion-header ac-trigger">
-            <span class="accordion-header-text">Shipping</span>
-            <span class="accordion-header-icon">
-                <svg width="20" height="14">
-                    <use href='/img/sprite.svg#icon-arrow-down'></use>
-                </svg>
-            </span>
-        </button>
+      <button class="ac-trigger">
+        <span>Description</span>
+        <span class="trigger-down">
+          <svg width="20" height="14">
+            <use href='/img/sprite.svg#icon-arrow-down'></use>
+          </svg>
+        </span>
+        <span class="trigger-up hidden">
+          <svg width="20" height="14">
+            <use href='/img/sprite.svg#icon-arrow-up'></use>
+          </svg>
+        </span>
+      </button>
     </h2>
-    <div class="accordion-body ac-panel" id="bookShipping">
-        <p>
-            We ship across the United States within 2–5 business days.
-             All orders are processed through USPS or a reliable courier
-            service. Enjoy free standard shipping on orders over $50.
-        </p>
+    <div class="ac-panel">
+      <p>${description}</p>
     </div>
-</div>
-              
-             
-              
-<div class="accordion-item ac" id="ac-2">
+  </div>
+
+    <div class="ac">
     <h2 class="ac-header">
-        <button class="accordion-header ac-trigger">
-            <span class="accordion-header-text">Returns</span>
-            <span class="accordion-header-icon">
-                <svg width="20" height="14">
-                    <use href='/img/sprite.svg#icon-arrow-down'></use>
-                </svg>
-            </span>
-        </button>
+      <button class="ac-trigger">
+        <span>Shipping</span>
+        <span class="trigger-down">
+          <svg width="20" height="14">
+            <use href='/img/sprite.svg#icon-arrow-down'></use>
+          </svg>
+        </span>
+        <span class="trigger-up hidden">
+          <svg width="20" height="14">
+            <use href='/img/sprite.svg#icon-arrow-up'></use>
+          </svg>
+        </span>
+      </button>
     </h2>
-
-    <div class="accordion-body ac-panel" id="bookReturns">
-        <p>You can return an item within 14 days of receiving your order, 
-        provided it hasn’t been used and is in its original
-        condition. To start a return, please contact our support team 
-        — we’ll guide you through the process quickly and
-        hassle-free.</p>
+    <div class="ac-panel">
+      <p>
+        We ship across the United States within 2–5 business days.
+        All orders are processed through USPS or a reliable courier service.
+        Enjoy free standard shipping on orders over $50.
+      </p>
     </div>
+  </div>
+
+   <div class="ac">
+    <h2 class="ac-header">
+      <button class="ac-trigger">
+        <span>Returns</span>
+        <span class="trigger-down">
+          <svg width="20" height="14">
+            <use href='/img/sprite.svg#icon-arrow-down'></use>
+          </svg>
+        </span>
+        <span class="trigger-up hidden">
+          <svg width="20" height="14">
+            <use href='/img/sprite.svg#icon-arrow-up'></use>
+          </svg>
+        </span>
+      </button>
+    </h2>
+    <div class="ac-panel">
+      <p>
+        You can return an item within 14 days of receiving your order,
+        provided it hasn’t been used and is in its original condition.
+        To start a return, please contact our support team — we’ll guide
+        you through the process quickly and hassle-free.
+      </p>
+    </div>
+  </div>
+
 </div>
 
-            </div>
+
           </div>
         </div>
       </div>
@@ -155,16 +171,56 @@ function markupModalWindow({ author, book_image, title, price, description }) {
   const buyForm = document.getElementById('buyForm');
   const messageBox = document.getElementById('message');
 
+  // Заборона скролу
+  document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
+
+  // код аккордеона
+  new Accordion('#accordionContainer', {
+    duration: 300,
+    showMultiple: false,
+    openOnInit: [],
+  });
+
+  // вгору та вниз
+  const triggerButtons = containerModalWindow.querySelectorAll('.ac-trigger');
+
+  triggerButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      //  час оновити .is-active
+      setTimeout(() => {
+        triggerButtons.forEach(otherBtn => {
+          const otherAc = otherBtn.closest('.ac');
+          const up = otherBtn.querySelector('.trigger-up');
+          const down = otherBtn.querySelector('.trigger-down');
+
+          //коли клік (актів) на кнопку додаємо або прибираємо
+          if (otherAc.classList.contains('is-active')) {
+            up.classList.remove('hidden');
+            down.classList.add('hidden');
+          } else {
+            up.classList.add('hidden');
+            down.classList.remove('hidden');
+          }
+        });
+      }, 10); // затримка
+    });
+  });
+
+  ////////////////
+
   //  Слухачі
-  closeBtn.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal); // хрестик
 
   backdrop.addEventListener('click', e => {
+    //  бекдроп
     if (e.target === backdrop) {
       closeModal();
     }
   });
 
   document.addEventListener(
+    //  ескейп
     'keydown',
     e => {
       if (e.key === 'Escape') {
@@ -174,14 +230,18 @@ function markupModalWindow({ author, book_image, title, price, description }) {
     { once: true }
   );
 
+  // + and -
+
   increaseBtn.addEventListener('click', () => {
     quantityInput.value = parseInt(quantityInput.value) + 1;
+    updateTotalPrice();
   });
 
   decreaseBtn.addEventListener('click', () => {
     const current = parseInt(quantityInput.value);
     if (current > 1) {
       quantityInput.value = current - 1;
+      updateTotalPrice();
     }
   });
 
@@ -190,7 +250,7 @@ function markupModalWindow({ author, book_image, title, price, description }) {
     iziToast.show({
       title: 'У кошику: ',
       message: `Додано до кошика: ${quantity} книг(и)`,
-      position: 'topRight',
+      position: 'topCenter',
     });
   });
 
@@ -200,17 +260,25 @@ function markupModalWindow({ author, book_image, title, price, description }) {
     iziToast.show({
       title: 'Покупка: ',
       message: 'Дякуємо за покупку!',
-      position: 'topRight',
+      position: 'topCenter',
     });
   });
 
-  // Ініціалізація аккордеона  -  ???
-  new Accordion('#accordionContainer');
+  // розрахунок загальної вартості
+  const bookTotal = document.getElementById('bookTotalPrice');
+
+  function updateTotalPrice() {
+    const quantity = parseInt(quantityInput.value) || 1;
+    const total = price * quantity;
+    bookTotal.textContent = `Total: $${total.toFixed(2)}`;
+  }
 }
 
 // Закриття модалки
 function closeModal() {
   const backdrop = document.getElementById('modalBackdrop');
   backdrop.classList.add('hidden');
-  document.body.style.overflow = ''; // Відновити скрол
+  // Відновити скрол
+  document.body.style.overflow = '';
+  document.documentElement.style.overflow = '';
 }
