@@ -19,7 +19,7 @@
     <script type="module" crossorigin src="/BookStack-Devs-05/index.js"></script>
     <link rel="modulepreload" crossorigin href="/BookStack-Devs-05/assets/vendor-CyMGiFMi.js">
     <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/vendor-C7ceV7z2.css">
-    <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/index-BWpJpXl3.css">
+    <link rel="stylesheet" crossorigin href="/BookStack-Devs-05/assets/index-Dp8roc6X.css">
   </head>
   <body>
     <header class="header" id="header">
@@ -221,24 +221,33 @@
   </div>
 </section>
 
-      <section class="section-books" id="books">
-  <div class="container">
-    <div>
-      <h2 class="books-title visually-hidden">Trending books</h2>
-      <h3 class="books-subtitle">Books</h3>
-      <span class="books-counter"></span>
+      <section class="section-books">
+  <div class="books-cont container">
+    <div class="books-navigation-cont">
+      <div class="books-title-cont">
+        <h2 class="books-title visually-hidden">Trending books</h2>
+        <h3 class="books-subtitle">Books</h3>
+        <span class="books-counter"></span>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown-btn" type="button">
+          <span class="dropdown-btn-text">Categories</span>
+          <svg class="btn-icon-categories" width="12" height="8">
+            <use href="../img/sprite.svg#icon-arrow-down"></use>
+          </svg>
+        </button>
+        <ul class="books-dropdown-menu visually-hidden"></ul>
+      </div>
     </div>
-    <div class="dropdown">
-      <button class="dropdown-btn" type="button">Categories</button>
-      <ul class="books-dropdown-menu" hidden></ul>
+    <div class="book-list-cont">
+      <ul class="books-list"></ul>
+      <p class="empty-message visually-hidden">
+        Looks like this category is empty. Feel free to explore another one!
+      </p>
+      <button type="button" class="show-more-btn visually-hidden">
+        Show More
+      </button>
     </div>
-    <ul class="books-list"></ul>
-    <p class="empty-message visually-hidden">
-      No books in this category. Please select another one.
-    </p>
-    <button type="button" class="show-more-btn visually-hidden">
-      Show More
-    </button>
   </div>
 </section>
 
