@@ -4,5 +4,5 @@ import './js/feedback.js';
 import './js/footer.js';
 import './js/header.js';
 import './js/hero.js';
-// import './js/modal-window.js';
+import './js/modal-window.js';
 import './js/btn-back-to-start.js';
