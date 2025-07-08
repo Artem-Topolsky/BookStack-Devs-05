@@ -17,10 +17,17 @@
       </div>
     </div>
     <div class="book-list-cont">
+      <span id="loader-one" class="loader visually-hidden"></span>
       <ul class="books-list"></ul>
-      <p class="empty-message visually-hidden">
-        Looks like this category is empty. Feel free to explore another one!
-      </p>
+      <div class="empty-message visually-hidden">
+        <svg class="books-search-icon" width="70" height="70">
+          <use href="../img/sprite.svg#icon-search"></use>
+        </svg>
+        <p class="empty-message-text">
+          Looks like this category is empty. Feel free to explore another one!
+        </p>
+      </div>
+      <span id="loader-two" class="loader visually-hidden"></span>
       <button type="button" class="show-more-btn visually-hidden">
         Show More
       </button>
