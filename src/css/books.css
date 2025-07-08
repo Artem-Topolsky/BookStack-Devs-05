@@ -287,7 +287,7 @@
 
     .book-list-card {
         width: calc((100% - 24px) / 2);
-        transition: transform 15ms ease 3ms;
+        transition: transform 500ms ease 50ms;
     }
 
     .book-list-card:hover {
