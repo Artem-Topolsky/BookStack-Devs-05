@@ -140,6 +140,11 @@
 
 /* Tablet (768px+) */
 @media (min-width: 768px) {
+
+  .hero-section {
+    margin-top: 72px;
+  }
+
   .title-nav-container {
     flex-direction: row;
     justify-content: space-between;
@@ -185,6 +190,11 @@
 
 /* Desktop (1440px+) */
 @media (min-width: 1440px) {
+
+  .hero-section {
+    margin-bottom: 32px;
+  }
+
   .slide-title {
     font-size: 52px;
     line-height: 1.2;
