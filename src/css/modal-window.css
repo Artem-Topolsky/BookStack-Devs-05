@@ -1,14 +1,6 @@
 /* #region mobile */
 
-/* mobile */
-.modal-backdrop {
-    min-width: 320px;
-    max-width: 375px;
-    padding: 0 20px;
-    margin: 0 auto;
-}
 
-/* mobile 2 */
 
 .hidden {
     display: none;
@@ -17,7 +9,8 @@
     height: 1px;
     margin: -1px;
     border: 0;
-    padding: 0;
+    padding: 0 20px;
+    margin: 0 auto;
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
@@ -35,6 +28,15 @@
     justify-content: center;
     align-items: center;
     z-index: 99;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms ease, visibility 300ms ease;
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal {
@@ -46,19 +48,37 @@
     margin-bottom: 32px;
     max-width: 375px;
     min-width: 320px;
+    max-height: 90vh;
     overflow-y: auto;
+    height: auto;
     z-index: 99;
-    height: 100vh;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: transform 2000ms ease, opacity 300ms ease;
+
+}
+
+.modal.show {
+    transform: translateY(0) scale(0.95);
+    opacity: 1;
 }
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     background: transparent;
     border: none;
+    cursor: pointer;
     fill: #0b0500;
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    fill: #e15d05;
+    transform: scale(1.5);
 }
 
 .modal-content-image img {
