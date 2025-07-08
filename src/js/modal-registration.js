@@ -74,18 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
       errorText.classList.remove('show');
 
       if (!field.value.trim()) {
-        field.classList.add('error');
-
-        if (field.name === 'name') {
-          errorText.textContent = 'Enter your name';
-        } else if (field.name === 'email') {
-          errorText.textContent = 'Enter your email';
-        } else if (field.name === 'message') {
-          errorText.textContent = 'Enter your message';
+        if (field.name !== 'message') {
+          field.classList.add('error');
+      
+          if (field.name === 'name') {
+            errorText.textContent = 'Enter your name';
+          } else if (field.name === 'email') {
+            errorText.textContent = 'Enter your email';
+          }
+      
+          errorText.classList.add('show');
+          isValid = false;
         }
-
-        errorText.classList.add('show');
-        isValid = false;
       } else if (
         field.type === 'email' &&
         !field.value.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)

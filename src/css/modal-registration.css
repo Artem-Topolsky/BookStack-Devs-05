@@ -23,17 +23,30 @@
   visibility: hidden;
 }
 
-
 .modal-registr {
   position: relative;
   background-color: #fceee6;
   width: 344px;
-  height: auto;
-  padding: 64px 16px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 32px  16px  64px;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.register-modal-close {
+  position: sticky;
+  top: 0;
+  margin-bottom: 16px ;
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s ease;
+  z-index: 2;
 }
 
 .span-registr-text {
@@ -67,7 +80,7 @@
 @media (min-width: 768px) {
   .modal-registr {
     width: 704px;
-    padding: 64px 32px;
+    padding: 32px 32px 64px;
   }
 
   .register-button {
@@ -79,20 +92,10 @@
 @media (min-width: 1440px) {
   .modal-registr {
     width: 866px;
-    padding: 64px;
+    padding: 32px 64px 64px;
   }
 }
 
-.register-modal-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  transition: transform 0.2s ease;
-}
 
 .register-icon-close {
   width: 12px;
