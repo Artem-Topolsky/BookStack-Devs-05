@@ -14,6 +14,10 @@
     pointer-events: none;
 }
 
+.section-books {
+    margin-bottom: 32px;
+}
+
 .books-cont {
     background-color: #fbeee5;
     padding-bottom: 32px;

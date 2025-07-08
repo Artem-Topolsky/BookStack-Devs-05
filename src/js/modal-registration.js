@@ -24,10 +24,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       document.body.classList.add('body-no-scroll');
+
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     });
   });
 
   closeButton.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener(
+    'keydown',
+    e => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    },
+    { once: true }
+  );
 
   function closeModal() {
     modal.classList.remove('show');
@@ -37,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.style.display = 'none';
       modal.classList.remove('hide');
       document.body.classList.remove('body-no-scroll');
+
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }, 300);
   }
 
