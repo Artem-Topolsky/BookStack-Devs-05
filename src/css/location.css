@@ -1,8 +1,9 @@
 /* Locations-Text */
 
 .location-section {
-  padding: 32px 0;
+  padding: 64px 0;
 }
+
 .location-label {
   font-weight: 600;
   text-transform: capitalize;
@@ -61,9 +62,7 @@
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.location-contacts-list
-  > .location-contacts-item:not(:last-child)
-  .location-details {
+.location-contacts-list>.location-contacts-item:not(:last-child) .location-details {
   text-decoration: underline;
 }
 

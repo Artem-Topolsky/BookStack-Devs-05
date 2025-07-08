@@ -10,7 +10,7 @@
     justify-content: flex-start;
     flex-direction: column;
     width: 375px;
-    height: 739px;
+    /* height: 739px; */
     color: black;
     background-color: rgba(252, 238, 230, 1);
     margin: 0 auto;
