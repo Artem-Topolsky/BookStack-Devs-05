@@ -174,7 +174,7 @@ function markupModalWindow({ author, book_image, title, price, description }) {
 
   new Accordion('#accordionContainer', {
     duration: 300,
-    showMultiple: false,
+    showMultiple: true,
     openOnInit: [],
   });
 

@@ -251,6 +251,26 @@
     color: #b44a04;
 }
 
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .learn-more-btn {
+        width: 300px;
+    }
+
+    .dropdown-btn,
+    .show-more-btn {
+        width: 288px;
+
+    }
+
+    .books-dropdown-menu {
+        width: 300px;
+    }
+
+    .books-dropdown-menu li {
+        width: 300px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .books-navigation-cont {
         display: flex;
