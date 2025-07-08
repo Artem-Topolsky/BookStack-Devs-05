@@ -6,6 +6,7 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
+    base: '/BookStack-Devs-05/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
