@@ -14,9 +14,27 @@
     pointer-events: none;
 }
 
-.section-books {
-    margin-bottom: 32px;
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #0b0500;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 10px auto;
 }
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
 
 .books-cont {
     background-color: #fbeee5;
@@ -100,11 +118,19 @@
     color: #0b0500;
     font-weight: 400;
     font-size: 14px;
+    cursor: pointer;
+    transition: font-size 10ms ease-in, font-weight 10ms ease-in;
 }
 
 .books-dropdown-menu li.is-active {
     background-color: rgba(11, 5, 0, 0.05);
+    font-weight: 450;
     ;
+}
+
+.books-dropdown-menu li:hover {
+    font-size: 15px;
+    font-weight: 450;
 }
 
 .books-list {
@@ -206,10 +232,20 @@
     border: 1px solid #0b0500;
 }
 
-.empty-message {
+.books-search-icon {
     margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.empty-message-text {
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    max-width: 342px;
+    max-width: 280px;
     font-weight: 600;
     font-size: 20px;
     color: #b44a04;
@@ -233,7 +269,11 @@
     .dropdown-btn {
         border-radius: 8px;
         width: 249px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
 
     .books-dropdown-menu {
         max-width: 249px;
@@ -247,6 +287,11 @@
 
     .book-list-card {
         width: calc((100% - 24px) / 2);
+        transition: transform 15ms ease 3ms;
+    }
+
+    .book-list-card:hover {
+        transform: scale(1.05) translateY(-5px);
     }
 
     .learn-more-btn {
@@ -260,11 +305,11 @@
         margin-right: auto;
     }
 
-    .empty-message {
+    .empty-message-text {
         width: 100%;
         align-self: center;
         text-align: center;
-        margin: 45px auto;
+        max-width: 460px;
         font-size: 25px;
     }
 }
@@ -353,6 +398,15 @@
     }
 
     .empty-message {
+        margin-top: 80px;
+    }
+
+    .empty-message-text {
         font-size: 30px;
+    }
+
+    .books-search-icon {
+        width: 100px;
+        height: 100px;
     }
 }
