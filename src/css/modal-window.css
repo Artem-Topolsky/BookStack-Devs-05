@@ -40,10 +40,11 @@
 }
 
 .modal {
+    position: relative;
     background-color: #fceee6;
     border-radius: 16px;
     padding: 64px 16px;
-    position: relative;
+    padding-top: 34px;
     margin-top: 32px;
     margin-bottom: 32px;
     max-width: 375px;
@@ -66,9 +67,11 @@
 }
 
 .modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+    margin-bottom: 16px;
+    display: block;
     background: transparent;
     border: none;
     cursor: pointer;
