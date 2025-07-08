@@ -149,7 +149,7 @@ function markupModalWindow({ author, book_image, title, price, description }) {
       <p>
         You can return an item within 14 days of receiving your order,
         provided it hasn’t been used and is in its original condition.
-        To start a return, please location our support team — we’ll guide
+        To start a return, please contact our support team — we’ll guide
         you through the process quickly and hassle-free.
       </p>
     </div>
