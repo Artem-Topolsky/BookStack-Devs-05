@@ -119,7 +119,7 @@
     font-weight: 400;
     font-size: 14px;
     cursor: pointer;
-    transition: font-size 10ms ease-in, font-weight 10ms ease-in;
+    transition: font-size 150ms ease-in, font-weight 150ms ease-in;
 }
 
 .books-dropdown-menu li.is-active {
