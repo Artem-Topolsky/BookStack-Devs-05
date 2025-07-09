@@ -352,8 +352,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         flex: 0 0 308px;
-        min-height: 100%;
-
+    
     }
 
     .book-list-cont {
@@ -399,13 +398,19 @@
         width: 100%;
         padding-left: 0;
     }
+    .books-dropdown-menu::-webkit-scrollbar {
+            display: none;
+    }
 
     .books-dropdown-menu {
         border: none;
         border-radius: 0;
         max-width: 308px;
-        max-height: 100vh;
         background: transparent;
+        overflow-y: visible;
+        overflow-x: visible;
+        max-height: none;
+        scrollbar-width: none;
     }
 
     .books-title-cont {
