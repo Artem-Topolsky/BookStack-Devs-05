@@ -135,6 +135,17 @@ body.no-scroll {
     font-size: 20px;
     cursor: pointer;
 }
+.navbar-list-style a,
+.header-list-style a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-list-style a:hover,
+.header-list-style a:hover {
+    transform: scale(1.1);
+    color: #e56a2d;
+}
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .header-container {

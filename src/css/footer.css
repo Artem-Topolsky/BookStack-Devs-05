@@ -68,13 +68,17 @@ body {
 .footer-nav-item a {
   color: var(--footer-text);
   text-decoration: none;
-  transition: color var(--transition-main);
+  transition:
+    color var(--transition-main),
+    transform var(--transition-main);
   cursor: pointer;
+  display: inline-block;
 }
 
 .footer-nav-item a:hover,
 .footer-nav-item a:focus {
   color: var(--footer-text-hover);
+  transform: scale(1.1);
 }
 
 .footer-right-block {
