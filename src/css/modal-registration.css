@@ -29,7 +29,7 @@
   width: 344px;
   max-height: 90vh;
   overflow-y: auto;
-  padding: 32px  16px  64px;
+  padding: 32px  16px;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
@@ -80,7 +80,7 @@
 @media (min-width: 768px) {
   .modal-registr {
     width: 704px;
-    padding: 32px 32px 64px;
+    padding: 32px 32px;
   }
 
   .register-button {
@@ -92,7 +92,7 @@
 @media (min-width: 1440px) {
   .modal-registr {
     width: 866px;
-    padding: 32px 64px 64px;
+    padding: 32px 64px 32px;
   }
 }
 
